@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* App theme tokens */
+:root {
+  --bg: 255 255 255;
+  --fg: 17 24 39;
+  --muted: 107 114 128;
+  --card: 255 255 255;
+  --border: 229 231 235;
+  --accent: 225 29 72; /* default rose-600 */
+  --accent-2: 251 113 133; /* rose-400 */
+  --ring: 244 63 94;
+}
+
+[data-theme="dark"] {
+  --bg: 3 7 18;
+  --fg: 243 244 246;
+  --muted: 156 163 175;
+  --card: 17 24 39;
+  --border: 31 41 55;
+  --accent: 244 63 94;
+  --accent-2: 251 113 133;
+  --ring: 244 63 94;
+}
+
+html, body { height: 100%; }
+body {
+  background: rgb(var(--bg));
+  color: rgb(var(--fg));
+}
+
+::selection {
+  background: rgba(var(--accent), 0.25);
+}
